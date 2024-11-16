@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Khaatabook</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav flex items-end justify-between p-10">
+            <div class="part1">
+              <a href="/" class="text-3xl font-bold">Khaatabook</a>
+            </div>
+            <div class="part2 flex text-xl items-center font-semibold justify-center gap-14">
+              <a href="/">Home</a>
+              <a href="/create">Create New Hisaab</a>
+            </div>
+        </div>
+        <div class="ml-12 section flex items-start justify-start flex-col gap-8">
+            <h3 class="text-xl font-bold">Create New Hisaab</h3>
+            <form action="/create" method="post" class="section flex items-start justify-start flex-col gap-8">
+                <input type="text" name="hisaabTitle" class="bg-[#f7f7f6] outline-none border border-[#f5f4f5] px-9 w-[70%] rounded-md py-2" placeholder="Shopping Hisaab, Ghar ka kharch">
+                <textarea name="hisaabContent" class="bg-[#f7f7f6] outline-none resize-none px-9 py-3 rounded-xl" placeholder="daal aata cheeni" id="" cols="100" rows="10"></textarea>
+                <button type="submit" class="bg-[#0185fe] px-8 py-3 text-white rounded-xl">Create New Hisaab</button>
+            </form>
+            
+        </div>
+    </div> 
+</body>
+</html>

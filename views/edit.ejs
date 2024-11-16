@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Edit Hisaab</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav flex items-end justify-between p-10">
+            <div class="part1">
+                <a href="/" class="text-3xl font-bold">Khaatabook</a>
+            </div>
+            <div class="part2 flex text-xl items-center font-semibold justify-center gap-14">
+                <a href="/">Home</a>
+                <a href="/create">Create New Hisaab</a>
+            </div>
+        </div>
+        <div class="flex ">
+        <div class="ml-12 section flex items-start justify-start flex-col gap-8">
+            <h3 class="text-2xl">You're editing the hisab of <span class="text-blue-700"><%= filename %></span> file</h3>
+            <form action="/edit/<%=filename%>.txt" method="POST" class="section ml-2 flex items-start justify-start flex-col gap-8">
+                <textarea name="newHisabEdit" class="bg-[#f7f7f6] outline-none resize-none px-9 py-3 rounded-xl"  cols="90" rows="14" placeholder="jai shree ram"> <%=filedata%></textarea>   
+                <button type="submit" class="bg-[#0185fe] px-8 py-3 rounded-xl">Update Task</button>
+            </form>
+        </div>
+
+        <div class="ml-32 mt-10">
+            <h1 class="text-2xl">file Content before update</h1>
+            <p class="test-xl mt-5 w-[80%]"><%=filedata%></p>
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>

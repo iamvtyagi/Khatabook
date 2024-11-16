@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div  class="nav flex items-end justify-between p-10">
+            <div class="part1">
+              <a href="/" class="text-3xl font-bold">Khaatabook</a>
+            </div>
+            <div class="part2 flex text-xl items-center font-semibold justify-center gap-14">
+              <a href="/">Home</a>
+              <a href="/create">Create New Hisaab</a>
+            </div>
+          </div>
+          <div class="section flex items-start justify-center flex-col ml-10 gap-3">
+            <h5 class="text-xl font-bold">hisab of <span class="text-blue-500"><%=filename1%></span> file</h5>
+            <h4 class="font-semibold"><%=filedata%></h4>
+            <a href="/edit/<%=filename%>" class="text-[#664c0fb6] text-xl">edit Hisaab</a>
+          </div>
+    </div>
+</body>
+</html>

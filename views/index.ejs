@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="main">
+    <div class="nav flex items-end justify-between p-10">
+      <div class="part1">
+        <a href="/" class="text-3xl font-sans font-bold">Khaatabook</a>
+      </div>
+      <div class="part2 flex text-xl items-center font-semibold justify-center gap-14">
+        <a href="/" class="font-sans">Home</a>
+        <a href="/create" class="font-sans">Create New Hisaab</a>
+      </div>
+    </div>
+    <div class="section flex flex-col items-start justify-start mt-5 ml-14">
+      <h3>All Hisaab Kitaab</h3>
+
+      <% if(files.length > 0){  %>
+        <% files.forEach(function(file){ %>
+          <div title="" class="hisabFile bg-[#0884fc] px-4 rounded-md w-96 py-3 flex items-center justify-between mt-5">
+            <div class="part1 flex gap-5 items-center">
+              <h4 class="text-white"><%=file%></h4>
+             <a href="/show/<%=file%>"><i class="ri-arrow-right-fill bg-white px-1 py-1 rounded-full"></i></a>
+            </div>
+            <div class="section_part2 gap-4 flex items-center">
+              <a href="/edit/<%=file%>"><i class="ri-pencil-line text-white"></i></a>
+              <a href="/delete/<%=file%>"><i class="ri-delete-bin-line bg-white px-1 py-1 rounded-full"></i></a>
+            </div>
+          </div>
+        <% }) %>
+     <%  } else{   %>
+         <h3 class="text-zinc-500 text-2xl mt-5">currently no hisab is created please create hisab to see</h3>
+   <%  } %>
+    </div>
+  </div>
+</body>
+</html>
