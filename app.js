@@ -9,6 +9,8 @@ app.use(express.static(path.join(__dirname,"public")));
 app.use(express.json());
 app.use(express.urlencoded({extended : true}))
 
+require('dotenv').config()
+
 // tailwind.config.js
 module.exports = {
   theme: {
@@ -145,5 +147,8 @@ app.get('/show/:filename', function (req, res) {
     });
   });
 
-app.listen(3000)
+  let port = process.env.PORT || 4999;
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
 
